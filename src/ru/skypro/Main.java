@@ -24,7 +24,7 @@ public class Main {
                 newEmployees[i] = employee;
                 return true;
             }
-        }
+        }//щлшоррг
         return false;
     }
 }
