@@ -1,51 +1,67 @@
 package ru.skypro;
 
-import com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX2RTFDTM;
-
 public class Employee {
-    int salary;
-    public String department;
-    public EmployeeList employeeList;
-    public static int employeeCount = 0;
+    public static int employeeCount = 1;
 
-    public Employee(EmployeeList employeeList, String department, int salary) {
+    private String firstName;
+    private String secondName;
+    private String thirdName;
+    private int department;
+    private float salary;
+    private int id;
+
+    public Employee(String firstName, String secondName, String thirdName, int department, float salary) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.thirdName = thirdName;
         this.department = department;
         this.salary = salary;
-        this.employeeList = employeeList;
-        Employee.employeeCount++;
+        this.id = employeeCount++;
     }
 
-    public String getDepartment() {
-        return getDepartment();
+    public String getFirstName() {
+        return firstName;
     }
 
-    public EmployeeList getEmployeeList() {
-        return employeeList;
+    public String getSecondName() {
+        return secondName;
     }
 
-    public int getSalary() {
-        return getSalary();
+    public String getThirdName() {
+        return thirdName;
     }
+
+    public int getDepartment() {
+        return department;
+    }
+
+    public float getSalary() {
+        return salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setDepartment() {
+        this.department = department;
+    }
+
+    public void setSalary() {
+        this.salary = salary;
+    }
+
+
 
     @Override
     public String toString() {
-        return employeeList +
-                " зарплата - " + salary +
-                " отдел в котором работает - " + department;
+        return "Employee{" +
+                "id=" + id +
+                ", firstNane='" + firstName + '\'' +
+                ", secondName=" + secondName +
+                ", thirdName='" + thirdName + '\'' +
+                ", department='" + department + '\'' +
+                ", salary='" + salary + '\'' +
+                '}';
     }
-
-    //    int id;
-//    int i = id++;
-
-//    public static int getEmployeeCount()
-////    {
-////        return Employee.employeeCount;
-////
-////    }
-////
-////    public static void setEmployeeCount(int employeeCount)
-////    {
-////        Employee.employeeCount = employeeCount;
-////
-////    }
 }
